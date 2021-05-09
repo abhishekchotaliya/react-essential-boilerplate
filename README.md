@@ -1,1 +1,1 @@
-# react-essential-boilerplate
+https://dev.to/shubhamagarwal/how-to-handle-multiple-environments-in-a-react-app-2fob

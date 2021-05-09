@@ -1,0 +1,95 @@
+{
+    "env": {
+        "browser": true,
+        "es6": true
+    },
+    "extends": [
+        "plugin:import/react",
+        "airbnb"
+        // "plugin:@typescript-eslint/recommended"
+    ],
+    "globals": {
+        "Atomics": "readonly",
+        "SharedArrayBuffer": "readonly"
+    },
+    "settings": {
+        "import/resolver": {
+            "node": {
+                "extensions": [
+                    ".js",
+                    ".jsx"
+                ],
+                "paths": ["./src"]
+            },
+            "alias": {
+                "map": [
+                    [
+                        "logic",
+                        "./src/logic/"
+                    ],
+                    [
+                        "components",
+                        "./src/components/"
+                    ]
+                ],
+                "extensions": [
+                    ".js",
+                    ".jsx",
+                    ".svg",
+                    ".png"
+                ]
+            }
+        }
+    },
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "ecmaVersion": 2020,
+        "sourceType": "module"
+    },
+    "parser": "babel-eslint",
+    "plugins": [
+        "react",
+        "react-hooks"
+    ],
+    "rules": {
+        "import/no-unresolved": [2, { "caseSensitive": false }],
+        "react-hooks/rules-of-hooks": "error", // Checks rules of Hooks
+        "react/jsx-filename-extension": "off",
+        "react/prefer-stateless-function": "off",
+        "no-use-before-define": "off",
+        "no-plusplus": "off",
+        "arrow-body-style": "off",
+        "react/require-default-props": "off",
+        "max-len": "warn",
+        "guard-for-in": "warn",
+        "no-restricted-syntax": "off",
+        "no-continue": "off",
+        "react/forbid-prop-types": "off",
+        "react/no-unused-prop-types": "off",
+        "react/no-did-update-set-state": "off",
+        "react/state-in-constructor": "off",
+        "react/jsx-props-no-spreading": "off",
+        "prefer-destructuring": [
+            "off"
+        ],
+        "jsx-a11y/click-events-have-key-events": "off",
+        "quotes": [
+            "error",
+            "single"
+        ],
+        "no-underscore-dangle": "off",
+        "comma-dangle": [
+            "error",
+            {
+                "arrays": "always-multiline",
+                "objects": "always-multiline",
+                "functions": "never",
+                "exports": "only-multiline",
+                "imports": "only-multiline"
+            }
+        ],
+        "semi": "warn"
+    }
+}
