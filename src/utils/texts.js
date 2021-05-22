@@ -1,7 +1,7 @@
 import pupa from 'pupa';
 
 /* eslint-disable no-template-curly-in-string */
-const english = {
+const texts = {
   ROOT_PAGE: {
     CREDIT: 'credit',
     COUNTER: 'counter',
@@ -14,4 +14,4 @@ export const toCapitalize = (str) => str.charAt(0).toUpperCase() + str.substring
 export const toUpperCase = (str) => str.toUpperCase();
 export const toLowerCase = (str) => str.toLowerCase();
 
-export default english;
+export default texts;

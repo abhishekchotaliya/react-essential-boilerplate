@@ -4,7 +4,7 @@ import { normalAction } from 'logic/actions/normalActions';
 import { fetchPosts } from 'logic/actions/postActions';
 import './App.scss';
 import { Store } from 'logic/store';
-import english, { fillString, toCapitalize, toUpperCase } from 'utils/english';
+import texts, { fillString, toCapitalize, toUpperCase } from 'utils/texts';
 import csvImg from '../file-csv.png';
 
 const App = () => {
@@ -29,7 +29,7 @@ const App = () => {
     <div className="App">
       <img alt="img" src={csvImg} />
       <h1>
-        {toUpperCase(english.ROOT_PAGE.CREDIT)}
+        {toUpperCase(texts.ROOT_PAGE.CREDIT)}
         :
         {creditCount}
       </h1>
@@ -47,7 +47,7 @@ const App = () => {
       </button>
       <hr />
       <h1>
-        {toCapitalize(english.ROOT_PAGE.COUNTER)}
+        {toCapitalize(texts.ROOT_PAGE.COUNTER)}
         :
         {normalCount}
       </h1>
@@ -64,7 +64,7 @@ const App = () => {
         +
       </button>
       <hr />
-      {fillString(english.ROOT_PAGE.DYNAMIC, { english: 'Eng', age: 2 })}
+      {fillString(texts.ROOT_PAGE.DYNAMIC, { english: 'Eng', age: 2 })}
       <hr />
 
       <button type="button" onClick={() => getPosts()}>
