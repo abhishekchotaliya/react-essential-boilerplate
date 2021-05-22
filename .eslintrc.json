@@ -54,6 +54,7 @@
         "react-hooks"
     ],
     "rules": {
+        "linebreak-style": "off",
         "import/no-unresolved": [2, { "caseSensitive": false }],
         "react-hooks/rules-of-hooks": "error", // Checks rules of Hooks
         "react/jsx-filename-extension": "off",
