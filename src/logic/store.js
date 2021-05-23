@@ -18,13 +18,7 @@ const StoreProvider = ({ children }) => {
       normalDispatch(action);
     }
   };
-  return (
-    <Store.Provider
-      value={{ state: globalState, dispatch }}
-    >
-      {children}
-    </Store.Provider>
-  );
+  return <Store.Provider value={{ state: globalState, dispatch }}>{children}</Store.Provider>;
 };
 
 StoreProvider.propTypes = {

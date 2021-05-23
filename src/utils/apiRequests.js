@@ -14,18 +14,14 @@ export const getRequest = async (url, params, headers, cancelToken) => {
     queryParams = `?${queryParams}`;
   }
   const finalUrl = `${url}${queryParams}`;
-  const data = await axios.get(finalUrl, { headers, timeout: TIMEOUT, cancelToken })
+  const data = await axios
+    .get(finalUrl, { headers, timeout: TIMEOUT, cancelToken })
     .then((resp) => resp.data)
     .catch((err) => getErrorResponse(err));
   return data;
 };
 
-export const postRequest = async (
-  url,
-  params,
-  headers,
-  cancelToken
-) => {
+export const postRequest = async (url, params, headers, cancelToken) => {
   const data = await axios({
     method: 'post',
     url,
@@ -40,21 +36,17 @@ export const postRequest = async (
 };
 
 export const deleteRequest = async (url, params, headers) => {
-  const data = await axios.delete(url, {
-    headers,
-    timeout: TIMEOUT,
-  })
+  const data = await axios
+    .delete(url, {
+      headers,
+      timeout: TIMEOUT,
+    })
     .then((resp) => resp.data)
     .catch((err) => getErrorResponse(err));
   return data;
 };
 
-export const putRequest = async (
-  url,
-  params,
-  headers,
-  cancelToken
-) => {
+export const putRequest = async (url, params, headers, cancelToken) => {
   const data = await axios({
     method: 'put',
     url,
